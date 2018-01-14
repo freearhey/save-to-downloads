@@ -20,15 +20,15 @@ function _anchorDownloader(url, filename) {
 function downloadResource(info, tab) {
   var url = info['srcUrl'];
   console.log("url: " + url);
-  var filename = url.substring(url.lastIndexOf('/')+1);
+  var filename = url.replace(/\\/g,'/').replace(/.*\//, '').split('?')[0]
   if (chrome.downloads) {
+    console.log(filename)
     chrome.downloads.download({ url: url, filename: filename, saveAs: false });
   } else {
     var a = document.createElement('a');
     a.href = url;
     a.download = filename;
-    // a.click();
-    chrome.tabs.create( { 'url' : _anchorDownloader( url, filename ), 'active' : false  } ); // gets around the download limit
+    chrome.tabs.create( { 'url' : _anchorDownloader( url, filename ), 'active' : false  } );
   }
 }
 
