@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "Save to Downloads",
+  "version": "0.0.1",
+  "permissions": [
+    "downloads",
+    "tabs",
+    "contextMenus"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  }
+}
