@@ -1,10 +1,9 @@
 {
   "manifest_version": 2,
   "name": "Save to Downloads",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "permissions": [
     "downloads",
-    "tabs",
     "contextMenus"
   ],
   "background": {
