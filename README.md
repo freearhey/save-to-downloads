@@ -1,8 +1,6 @@
 # Save to Downloads
 
-An easy way to save images to the Downloads folder.
-
-It simply adds new option to the context menu, which allows you to save images directly to the Downloads folder.
+It adds new option to the context menu, which allows you to save images directly to the Downloads folder.
 
 ## Install
 
